@@ -1,0 +1,4 @@
+sensor_msgs/PointCloud2 cloud
+Float64[] mean
+Float64[] eigen_values
+Float64[] eigen_vectors
