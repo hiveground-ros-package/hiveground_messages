@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(clustered_object_msgs)
+project(clustered_clouds_msgs)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs geometry_msgs sensor_msgs message_generation)
+find_package(catkin REQUIRED COMPONENTS roscpp rospy sensor_msgs message_generation)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -22,8 +22,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs geometry_msgs sens
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  ClusteredObject.msg
-  ClusteredObjects.msg
+  ClusteredClouds.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -36,7 +35,7 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  std_msgs geometry_msgs sensor_msgs # Or other packages containing msgs
+  sensor_msgs # Or other packages containing msgs
 )
 
 ###################################
@@ -50,7 +49,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES kinect_msgs
-  CATKIN_DEPENDS std_msgs geometry_msgs 
+  CATKIN_DEPENDS sensor_msgs
 #  DEPENDS system_lib
 )
 
