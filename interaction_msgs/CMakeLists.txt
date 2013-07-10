@@ -4,7 +4,7 @@ project(interaction_msgs)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy geometry_msgs message_generation)
+find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs geometry_msgs message_generation)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -22,8 +22,8 @@ find_package(catkin REQUIRED COMPONENTS roscpp rospy geometry_msgs message_gener
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  Hand.msg
-  Hands.msg
+  Arm.msg
+  Arms.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -36,7 +36,7 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  geometry_msgs # Or other packages containing msgs
+  std_msgs geometry_msgs # Or other packages containing msgs
 )
 
 ###################################
@@ -50,7 +50,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES kinect_msgs
-  CATKIN_DEPENDS geometry_msgs 
+  CATKIN_DEPENDS std_msgs geometry_msgs 
 #  DEPENDS system_lib
 )
 
