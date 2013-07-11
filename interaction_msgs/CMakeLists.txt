@@ -24,6 +24,8 @@ add_message_files(
   FILES
   Arm.msg
   Arms.msg
+  Gesture.msg
+  Gestures.msg
 )
 
 ## Generate services in the 'srv' folder
