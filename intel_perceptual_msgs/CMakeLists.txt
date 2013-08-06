@@ -22,7 +22,7 @@ find_package(catkin REQUIRED roscpp rospy std_msgs geometry_msgs message_generat
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  HandGestures.msg
+  Gesture.msg
 )
 
 ## Generate services in the 'srv' folder
